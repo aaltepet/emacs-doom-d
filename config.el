@@ -65,3 +65,10 @@
 ;; they are implemented.
 
 (remove-hook 'doom-first-buffer-hook #'smartparens-global-mode)
+
+;; emacs incorrectly sets up the path, so my go/bin is part of an Emacs/cellar path
+;; instead of determining why, I'm just appending the correct go path
+;; onto the end of PATH and exec-path, this makes gopls and lsp-mode happy
+(setenv "PATH" (concat (getenv "PATH") ":/Users/andy/go/bin"))
+(message "%s" exec-path)
+(setq exec-path (append exec-path '("/Users/andy/go/bin")))
