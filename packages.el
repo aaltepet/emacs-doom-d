@@ -10,6 +10,11 @@
 ;(package! some-package)
 (package! monokai-theme)
 (package! prettier-js)
+(package! ibuffer-vc)
+(package! projectile-ripgrep)
+;; lsp-mode backend for prisma orm files
+(package! prisma-mode :recipe (:host github :repo "pimeys/emacs-prisma-mode" :branch "main"))
+;; (package! git-timemachine)
 
 ;; To install a package directly from a remote git repo, you must specify a
 ;; `:recipe'. You'll find documentation on what `:recipe' accepts here:
