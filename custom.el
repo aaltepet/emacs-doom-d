@@ -33,6 +33,9 @@
  ;; If there is more than one, they won't work right.
  )
 
+(add-to-list 'auto-mode-alist '("\\dockerfile.*\\'" . dockerfile-mode))
+
+
 ;;; hideshowvis.el --- Fringe markers for regions foldable by hideshow.el -*- lexical-binding: t; -*-
 ;;
 ;; Copyright 2008-2018 Jan Rehders
